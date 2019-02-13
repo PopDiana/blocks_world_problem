@@ -1,0 +1,50 @@
+Number of blocks : 7
+
+
+Initial : ((0,), (2, 3, 5), (1, 4, 6))
+Goal :  ((4, 5, 6), (0, 1), (2,), (3,)) 
+
+
+Solution for astar search : 
+
+
+ACTION :                STATE :             
+
+Initial state ->        ((0,), (2, 3, 5), (1, 4, 6))
+
+Move from 2 down       ((0,), (6,), (1, 4), (2, 3, 5))
+
+Move from 3 to 1        ((0,), (1, 4), (2, 3), (6, 5))
+
+Move from 2 down       ((0,), (2,), (3,), (1, 4), (6, 5))
+
+Move from 3 down       ((0,), (2,), (3,), (1,), (4,), (6, 5))
+
+Move from 3 to 0        ((2,), (3,), (4,), (6, 5), (0, 1))
+
+Move from 3 to 2        ((2,), (3,), (6,), (0, 1), (4, 5))
+
+Move from 2 to 4        ((2,), (3,), (0, 1), (4, 5, 6))
+
+
+
+Solution for recursive best first search : 
+
+
+ACTION :                STATE :             
+
+Initial state ->        ((0,), (2, 3, 5), (1, 4, 6))
+
+Move from 2 down       ((0,), (6,), (1, 4), (2, 3, 5))
+
+Move from 2 to 1        ((0,), (1,), (6, 4), (2, 3, 5))
+
+Move from 1 to 0        ((6, 4), (0, 1), (2, 3, 5))
+
+Move from 2 down       ((5,), (6, 4), (0, 1), (2, 3))
+
+Move from 3 down       ((5,), (2,), (3,), (6, 4), (0, 1))
+
+Move from 3 down       ((5,), (2,), (3,), (6,), (4,), (0, 1))
+
+Move from 0 to 4        ((2,), (3,), (6,), (0, 1), (4, 5))
